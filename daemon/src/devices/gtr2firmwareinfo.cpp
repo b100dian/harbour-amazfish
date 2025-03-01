@@ -15,7 +15,7 @@ Gtr2FirmwareInfo::Gtr2FirmwareInfo(const QByteArray &bytes) : HuamiFirmwareInfo(
 bool Gtr2FirmwareInfo::supportedOnDevice(const QString &device) const
 {
     qDebug() << "Checking if device is supported: " << device;
-    return device == "Amazfit GTR 2" && m_type != Invalid && !m_version.contains("unknown");
+    return (device == "Amazfit GTR 2" || device == "Amazfit GTR 3 Pro") && m_type != Invalid && !m_version.contains("unknown");
 }
 
 void Gtr2FirmwareInfo::determineFirmwareType() {

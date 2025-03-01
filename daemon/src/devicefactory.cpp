@@ -35,7 +35,7 @@ AbstractDevice* DeviceFactory::createDevice(const QString &deviceName)
         return new GtrDevice(deviceName);
     }
 
-    if (deviceName == "Amazfit GTR 2") {
+    if (deviceName == "Amazfit GTR 3 Pro") {
         return new Gtr2Device(deviceName);
     }
 
