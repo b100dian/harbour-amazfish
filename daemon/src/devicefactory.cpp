@@ -42,6 +42,10 @@ AbstractDevice* DeviceFactory::createDevice(const QString &deviceName)
         return new Gtr2Device(deviceName);
     }
 
+    if (deviceName == "Amazfit GTR 3 Pro") {
+        return new ZeppOSDevice(deviceName);
+    }
+
     if (deviceName == "Amazfit Bip Lite") {
         return new BipLiteDevice(deviceName);
     }

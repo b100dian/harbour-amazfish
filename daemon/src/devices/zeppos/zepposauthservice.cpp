@@ -5,6 +5,8 @@
 #include "amazfishconfig.h"
 
 #include <Qt-AES/qaesencryption.h>
+#include <iostream>
+#include <random>
 
 uint8_t getRandomUint8() {
     static std::random_device rd;  // Non-deterministic random device
@@ -23,6 +25,7 @@ ZeppOsAuthService::ZeppOsAuthService(ZeppOSDevice *device) : AbstractZeppOsServi
 QString ZeppOsAuthService::name() const
 {
     return "Auth";
+        qDebug() << "Not chunked";
 }
 
 void ZeppOsAuthService::handlePayload(const QByteArray &payload)
@@ -166,8 +169,9 @@ void ZeppOsAuthService::debugArrayPrint(const QString &name, uint8_t *arr, int s
     qDebug() << "FIXME";
 #else
     QDebug dbg(QtDebugMsg);
+    dbg << std::hex;
     for (int i = 0; i < size; i++) {
-        dbg << Qt::hex << arr[i] << (i < size ? ':' : '\n');
+        dbg << arr[i] << (i < size ? ':' : '\n');
     }
 #endif
 }

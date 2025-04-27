@@ -95,6 +95,13 @@ ListModel {
     }
 
     ListElement {
+        deviceType: "Amazfit GTR 3 Pro"
+        icon: "../pics/devices/amazfit-gtr3-pro.png"
+        auth: true
+        pattern: "Amazfit GTR 3 Pro"
+    }
+
+    ListElement {
         deviceType: "Amazfit Balance"
         icon: "../pics/devices/miband4.png"
         auth: true
