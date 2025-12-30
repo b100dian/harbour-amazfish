@@ -56,6 +56,7 @@ set(SOURCES
 ./src/devices/zeppos/picoproto.cpp
 ./src/devices/zeppos/zepposfiletransferservice.cpp
 ./src/devices/zeppos/filetransfer/zepposfiletransferimpl.cpp
+./src/devices/zeppos/filetransfer/zepposfiletransferv2.cpp
 ./src/devices/zeppos/filetransfer/zepposfiletransferv3.cpp
 ./src/harbour-amazfish-daemon.cpp
 ./src/huamiweathercondition.cpp
@@ -169,6 +170,7 @@ set(HEADERS
 ./src/devices/zeppos/zepposuserinfoservice.h
 ./src/devices/zeppos/zepposfiletransferservice.h
 ./src/devices/zeppos/filetransfer/zepposfiletransferimpl.h
+./src/devices/zeppos/filetransfer/zepposfiletransferv2.h
 ./src/devices/zeppos/filetransfer/zepposfiletransferv3.h
 ./src/huamiweathercondition.h
 ./src/navigationinterface.h
