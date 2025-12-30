@@ -1,7 +1,7 @@
 #include "zepposfiletransferservice.h"
 #include "qbleservice.h"
 #include "zeppos/filetransfer/zepposfiletransferv3.h"
-
+#include "zeppos/filetransfer/zepposfiletransferv2.h"
 ZeppOsFileTransferService::ZeppOsFileTransferService(ZeppOSDevice *device) : AbstractZeppOsService(device, false)
 {
     m_endpoint = 0x000d;
@@ -21,7 +21,7 @@ void ZeppOsFileTransferService::handlePayload(const QByteArray &payload)
     }
     int version = payload[1] & 0xff;
     if (version == 1 || version == 2) {
-        //m_impl = new ZeppOsFileTransferV2(this, getSupport());
+        m_impl = new ZeppOsFileTransferV2(this, m_device);
     } else if (version == 3) {
         m_impl = new ZeppOsFileTransferV3(this, m_device);
     } else {

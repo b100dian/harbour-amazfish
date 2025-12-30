@@ -2,7 +2,7 @@
 #include "zeppos/zepposfiletransferservice.h"
 #include <QStringList>
 #include <optional>
-
+#pragma once
 class ZeppOsFileTransferImpl {
 public:
 
